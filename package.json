@@ -1,0 +1,41 @@
+{
+  "name": "readical_test",
+  "version": "0.1.0",
+  "description": "WisperSync for the web",
+  "main": "js/main.js",
+  "browser": "js/main.js",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "opn-cli": "^3.1.0",
+    "shx": "^0.2.1"
+  },
+  "devDependencies": {
+    "ghpages": "^0.0.10",
+    "opn": "^4.0.2"
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "http-server -c-1 -p 7005 --cors",
+    "pressl": "openssl req -new -newkey rsa:4096 -sha512 -days 365 -nodes -x509 -subj '/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com' -keyout key.pem -out cert.pem",
+    "ssl": "npm run dev -- --ssl",
+    "deploy": "ghpages -p _prod",
+    "open": "opn 'https://kotteavi.github.io/readical_test/'",
+    "prebuild": "shx rm -rf _prod",
+    "preprod": "npm run build",
+    "pretest": "npm run build",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotteavi/readical_test.git"
+  },
+  "author": "Avi Kotte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotteavi/readical_test/issues"
+  },
+  "homepage": "https://github.com/kotteavi/readical_test#readme"
+}
