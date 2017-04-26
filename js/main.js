@@ -205,11 +205,9 @@ function createSubtitleTest(syncData) {
         begin = stamps[1];
         end = stamps[2];
 
-        if (begin != undefined && end != undefined) {
-            idName = 'word_' + i + '_' + begin + '_' + end;
-            begin = Math.floor(begin);
-            className = 'group_' + begin;
-        }
+        idName = 'word_' + i + '_' + begin + '_' + end;
+        begin = Math.floor(begin);
+        className = 'group_' + begin;
 
         element = document.createElement('span');
         element.setAttribute("id", idName);

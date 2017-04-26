@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Publisher Test Page</title>
+</head>
+
+<body>
+    <h1>Publisher Test Page</h1>
+    <!-- script include snippet here 
+    <script async src="http://widget.dev:8081/sample"></script> -->
+    <div>
+        <script id="readical-widget" data-readical-id="ISSTH_1364">
+            (function () {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'http://widget.dev:8081/widget.js';
+                var entry = document.getElementById('readical-widget');
+                entry.parentNode.insertBefore(script, entry);
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
