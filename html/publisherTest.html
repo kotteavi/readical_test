@@ -14,7 +14,17 @@
             (function () {
                 var script = document.createElement('script');
                 script.async = true;
-                script.src = 'http://widget.dev:8081/widget.js';
+
+                var WIDGET_HOST_NAME = '';
+                if (location.hostname != "widget.dev") {
+                    HOST_NAME = 'https://readical.herokuapp.com/';
+                }
+                else {
+                    WIDGET_HOST_NAME = 'http://widget.dev:8081'
+                }
+
+                script.src = WIDGET_HOST_NAME + '/widget.js';
+
                 var entry = document.getElementById('readical-widget');
                 entry.parentNode.insertBefore(script, entry);
             })();
