@@ -16,11 +16,11 @@
                 script.async = true;
 
                 var WIDGET_HOST_NAME = '';
-                if (location.hostname != "widget.dev") {
-                    HOST_NAME = 'https://readical.herokuapp.com/';
+                if (location.hostname == "widget.dev") {
+                    WIDGET_HOST_NAME = 'http://widget.dev:8081'
                 }
                 else {
-                    WIDGET_HOST_NAME = 'http://widget.dev:8081'
+                    WIDGET_HOST_NAME = 'https://readical.herokuapp.com/';
                 }
 
                 script.src = WIDGET_HOST_NAME + '/widget.js';
